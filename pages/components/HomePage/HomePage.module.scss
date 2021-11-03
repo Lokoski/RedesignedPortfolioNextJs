@@ -1,0 +1,44 @@
+@import url(//db.onlinewebfonts.com/c/a0c08669717ba4342437aef1f5da1bc8?family=Novecento+Bold);
+@import url(//db.onlinewebfonts.com/c/0376a58122a881d16a294512d3c947b1?family=ProximaNova-Regular);
+$primary-red:#BF2A26;
+$primary-offWhite: #E5E5E5;
+
+.container{
+    height:100vh;
+    background: linear-gradient(to right, $primary-red 0%,$primary-red  35%,$primary-offWhite 35%,$primary-offWhite 100%);
+    font-family: novecento;
+    padding-left:40px;
+    padding-top:245px;
+    h1{
+        font-family: Novecento Bold;
+        font-weight: bold;
+        font-size: 160px;
+        line-height: 192px;
+    }
+
+    span {
+        color:$primary-red
+    }
+
+    h3{
+        font-family: ProximaNova-Regular;
+        font-size: 62.5px;
+        line-height: 64px;
+        font-weight: normal;
+    }
+
+    button{
+        width: 200px;
+        height: 57px;
+        border-radius: 10px;
+        background: #000000;
+        font-family: Novecento Bold;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #D7D4CA;
+        text-align: center;
+        border:none;
+        margin-top:40px;
+    }
+}
