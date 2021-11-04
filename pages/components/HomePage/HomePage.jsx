@@ -1,18 +1,22 @@
-import styles from "./HomePage.module.scss"
-
-
-const handleClick = () => {
-    console.log("Clicked")
-}
-
+import styles from "./HomePage.module.scss";
+import Link from "next/link";
 const HomePage = () => {
-    return (
-        <div className={styles.container}>
-                <h1>Hello, <br /> I&apos;m Alex<span>.</span></h1>
-                <h3>A Full-Stack Web Developer</h3>
-                <button onClick={() => handleClick()} type="buttons">Resume</button>
-        </div>
-    )
-}
+  return (
+    <div className={styles.container}>
+      <h1>
+        Hello, <br /> I&apos;m Alex<span>.</span>
+      </h1>
+      <h3>A Full-Stack Web Developer</h3>
+      <Link
+        href="https://drive.google.com/file/d/1Xej3F-X7mPF354ypgvi0EnQ7upW7fCC0/view?usp=sharing, _blank"
+        passHref
+      >
+        <a target="_blank" rel="noopener noreferrer">
+          <button type="button">Resume</button>
+        </a>
+      </Link>
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;

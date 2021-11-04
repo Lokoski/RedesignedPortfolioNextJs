@@ -1,11 +1,20 @@
-import styles from "./ProjectCard.module.scss"
+import styles from "./ProjectCard.module.scss";
+import Image from "next/image";
 
-const ProjectCard = () => {
-    return (
-        <div>
-            Project Card
+const ProjectCard = ({ projects }) => {
+
+  return (
+    <div className={styles.container}>
+      {projects.map((project) => (
+        <div key={project.id}>
+          <div className={styles.cardContainer}>
+            <Image src={project.image} alt="" layout="fill" />
+          </div>
+          <h3 className={styles.cardName}>{project.title}</h3>
         </div>
-    )
-}
+      ))}
+    </div>
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;

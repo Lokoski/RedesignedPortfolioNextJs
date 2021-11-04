@@ -5,6 +5,7 @@ import Projects from "./components/Projects/Projects"
 import Contact from "./components/Contact/Contact"
 import About from "./components/About/AboutMe"
 import Toolkit from "./components/Toolkit/Toolkit"
+import Footer from "./components/Footer/Footer"
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
     <About />
     <Toolkit />
     <Contact />
+    <Footer />
     </div>
   )
 }
