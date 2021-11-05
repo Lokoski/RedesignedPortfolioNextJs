@@ -1,9 +1,4 @@
-@import url(//db.onlinewebfonts.com/c/a0c08669717ba4342437aef1f5da1bc8?family=Novecento+Bold);
-@import url(//db.onlinewebfonts.com/c/0376a58122a881d16a294512d3c947b1?family=ProximaNova-Regular);
-$primary-red:#BF2A26;
-$primary-offWhite: #D7D4CA;
-$primary-black: #000000;
-
+@import '/styles/variables';
 
 .container{
     height:100%;
@@ -28,19 +23,19 @@ $primary-black: #000000;
     width: 350px;
     height: 425px;
     border: 3px solid #000000;
-    box-sizing: border-box;
     border-radius: 10px;
     position: relative;
+    margin-right: 255px;
 }
 
 .contentContainer{
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
 .paragraph{
-    width: 698px;
+    width: 798px;
     height: 323px;
     display:flex;
     align-items: center;

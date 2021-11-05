@@ -1,0 +1,107 @@
+@import '/styles/variables';
+
+.container{
+    height: 100%;
+    display: flex;
+    h1{
+
+font-family: Novecento Bold;
+font-style: normal;
+font-weight: bold;
+font-size: 72px;
+line-height: 86px;
+color:$primary-offWhite
+    }
+    span{
+        color: $primary-black;
+    }
+
+    .leftContainer{
+        background: $primary-red;
+        padding:40px 0 36px 40px;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+   }
+
+    .rightContainer{
+        width: 65%;
+        background: $primary-offWhite
+    }
+
+    .socialIconsContainer{
+        display:flex;
+    }
+
+    .socialIconsGithub{
+        height: 45px;
+        width: 45px;
+        background: black;
+        margin-right: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        overflow: hidden;
+    }
+
+    .socialIconsTwitter{
+        height: 45px;
+        width: 45px;
+        background:$primary-offWhite;
+        margin-right: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        overflow: hidden;
+    }
+
+    .socialIconsFile{
+        height: 45px;
+        width: 34px;
+        margin-right: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content:center;
+        background:$primary-black;
+        margin-left:12px;
+    }
+
+    .socialIconsLinkedIn{
+        height: 45px;
+        width: 45px;
+        margin-right: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        background: $primary-offWhite;
+        overflow: hidden;
+    }
+
+    .githubIcon{
+        height: 50px;
+        width: 50px;
+        color: #D7D4CA;
+    }
+
+    .twitterIcon{
+        height: 30px;
+        width: 30px;
+        color:$primary-black;
+    }
+
+    .linkedInIcon{
+        height: 25px;
+        width: 30px;
+        background: $primary-offWhite;
+    }
+
+    .fileIcon{
+        height: 45px;
+        width: 45px;
+        color: $primary-offWhite;
+    }
+}

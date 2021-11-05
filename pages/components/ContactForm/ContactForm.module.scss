@@ -1,3 +1,7 @@
+@import '/styles/variables';
+
+
+
 .container{
     display: flex;
     height: 100%;
@@ -17,11 +21,8 @@
         line-height: 18px;
     }
 
-    input:focus{
+    input:focus, textarea:focus{
         outline: none;
-    }
-    input:first-child{
-        margin-right: 97px;
     }
 
     textarea{
@@ -37,13 +38,18 @@
         font-size: 18px;
         line-height: 18px;
         padding: 16px 0 0 16px;
+        resize: none;
 
     }
 
     .nameAndEmail{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         margin-bottom: 53px;
+    }
+
+    .emailInput{
+        margin-left: 93px;
     }
 
    .subject{
@@ -66,6 +72,44 @@
         font-size: 18px;
         line-height: 22px;
         font-family: Novecento Bold;
+        border:none;
+    }
+
+    button:hover{
+        cursor: pointer;
+    }
+
+    button:focus{
+        border:1px solid $primary-red
     }
    }
+
+   .line {
+    position: relative;
+    top: -2px;
+    width: 0;
+    height: 3px;
+    background: $primary-red;
+  }
+
+  .lineWithMargin{
+    position: relative;
+    top: -2px;
+    width: 0;
+    height: 3px;
+    background: $primary-red;
+  }
+
+  input:focus+.line{
+    max-width: 300px;
+    width: 100%;
+    transition: width 0.50s ease-in-out;
+  }
+
+  input:focus+.lineWithMargin{
+    max-width: 300px;
+    width: 100%;
+    transition: width 0.50s ease-in-out;
+    margin-left: 93px;
+  }
 }

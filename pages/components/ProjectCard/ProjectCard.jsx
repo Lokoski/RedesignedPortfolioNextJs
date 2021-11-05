@@ -1,8 +1,7 @@
 import styles from "./ProjectCard.module.scss";
 import Image from "next/image";
 
-const ProjectCard = ({ projects }) => {
-
+const ProjectCard = ({ projects, setOpenModal, openModal, setProjectId }) => {
   return (
     <div className={styles.container}>
       {projects.map((project) => (
@@ -10,7 +9,15 @@ const ProjectCard = ({ projects }) => {
           <div className={styles.cardContainer}>
             <Image src={project.image} alt="" layout="fill" />
           </div>
-          <h3 className={styles.cardName}>{project.title}</h3>
+            <h3 className={styles.cardName}>{project.title}</h3>
+            <button
+              onClick={() => {
+                setOpenModal(!openModal);
+                setProjectId(project.id);
+              }}
+            >
+              See More
+            </button>
         </div>
       ))}
     </div>

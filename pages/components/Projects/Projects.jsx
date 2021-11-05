@@ -1,16 +1,44 @@
 import ProjectCard from "../ProjectCard/ProjectCard";
+import { useState } from "react";
 import styles from "./Projects.module.scss";
-import {PROJECTS} from '../../../data/projects'
+import Modal from "../Modal/Modal";
+import { PROJECTS } from "../../../data/projects";
+import onClickOutside from "react-onclickoutside";
 
 const Projects = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  Projects.handleClickOutside = () => setOpenModal(false);
+
+  const [projectId, setProjectId] = useState();
   return (
-    <div className={styles.container}>
-      <h1>
-        Work<span>.</span>
-      </h1>
-         <ProjectCard projects={PROJECTS} />        
-    </div>
+    <>
+      <div className={styles.container}>
+        <h1>
+          Work<span>.</span>
+        </h1>
+        <div className={styles.projectCard}>
+          <ProjectCard
+            projects={PROJECTS}
+            openModal={openModal}
+            setOpenModal={setOpenModal}
+            setProjectId={setProjectId}
+          />
+        </div>
+      </div>
+      {openModal && (
+        <Modal
+          data={PROJECTS}
+          projectId={projectId}
+          setOpenModal={setOpenModal}
+        />
+      )}
+    </>
   );
 };
 
-export default Projects;
+const clickOutsideConfig = {
+  handleClickOutside: () => Projects.handleClickOutside,
+};
+
+export default onClickOutside(Projects, clickOutsideConfig);

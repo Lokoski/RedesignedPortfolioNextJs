@@ -1,4 +1,4 @@
-import styles from "./ContactMe.module.scss";
+import styles from "./Contact.module.scss";
 import ContactForm from "../ContactForm/ContactForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -20,24 +20,24 @@ const Contact = () => {
           <div className={styles.socialIconsFile}>
             <FontAwesomeIcon
               className={styles.fileIcon}
-              icon={["fas", "file-alt"]}
+              icon={["fa", "file-alt"]}
             />
           </div>
-          <div className={styles.socialIcons}>
+          <div className={styles.socialIconsLinkedIn}>
             <FontAwesomeIcon
-              className={styles.icons}
-              icon={["fab", "linkedin"]}
+              className={styles.linkedInIcon}
+              icon={["fab", "linkedin-in"]}
             />
           </div>
-          <div className={styles.socialIcons}>
+          <div className={styles.socialIconsGithub}>
             <FontAwesomeIcon
-              className={styles.icons}
+              className={styles.githubIcon}
               icon={["fab", "github"]}
             />
           </div>
-          <div className={styles.socialIcons}>
+          <div className={styles.socialIconsTwitter}>
             <FontAwesomeIcon
-              className={styles.icons}
+              className={styles.twitterIcon}
               icon={["fab", "twitter"]}
             />
           </div>
