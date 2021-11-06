@@ -4,7 +4,7 @@ import Image from "next/image";
 const ToolkitIconCard = ({ data }) => {
   return (
     <div className={styles.container}>
-      {data.map((icon) => (
+      {data && data.map((icon) => (
         <div key={icon.id} className={styles.contentContainer}>
           <div className={styles.image}>
             <Image src={icon.image} alt="icon" layout="fill" />

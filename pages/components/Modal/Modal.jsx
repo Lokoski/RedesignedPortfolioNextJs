@@ -2,7 +2,7 @@ import styles from "./Modal.module.scss";
 import Image from "next/image";
 
 const Modal = ({ data, projectId, setOpenModal }) => {
-  const filteredData = data.filter((data) => data.id === projectId)[0];
+  const filteredData = data && data.filter((data) => data.id === projectId)[0];
 
   const { title, image, description } = filteredData;
 

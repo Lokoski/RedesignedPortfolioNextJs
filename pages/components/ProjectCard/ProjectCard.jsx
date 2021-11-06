@@ -4,7 +4,7 @@ import Image from "next/image";
 const ProjectCard = ({ projects, setOpenModal, openModal, setProjectId }) => {
   return (
     <div className={styles.container}>
-      {projects.map((project) => (
+      {projects && projects.map((project) => (
         <div key={project.id}>
           <div className={styles.cardContainer}>
             <Image src={project.image} alt="" layout="fill" />
