@@ -1,27 +1,82 @@
-@import '/styles/variables';
+@import "/styles/variables";
+@import "/styles/mixins";
 
+.cardContainer {
+  height: 552px;
+  width: 650px;
+  border: 3px solid #d7d4ca;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  position: relative;
 
-.cardContainer{
-    height:552px;
-    width: 552px;
-    border: 3px solid #D7D4CA;
-    border-radius: 10px;
-    margin-top: 40px;
-    margin-bottom: 16px;
-    position: relative;
+.cardImage{
+  object-fit: cover;
+}
+  @include xs {
+    height: 160px;
+    width: 160px;
+  }
+
+  @include md {
+    height: 300px;
+    width: 300px;
+  }
+
+  @include lg {
+    height: 400px;
+    width: 400px;
+  }
+
+  @media (max-width: 360px) {
+    height: 220px;
+    width: 220px;
+  }
+
+  @include sm {
+    height: 225px;
+    width: 225px;
+  }
 }
 
-.cardName{
-    font-family: ProximaNova-Regular;
-    font-size: 48px;
-    line-height: 48px;
-    color: #D7D4CA;
-    margin-bottom: 40px;
+.cardName {
+  font-family: ProximaNova-Regular;
+  font-size: 48px;
+  line-height: 48px;
+  color: #d7d4ca;
+  margin-bottom: 40px;
+
+  @include xs {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @include md {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  @include lg {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  @include sm {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
 
-.container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
+  @include xs {
+    column-gap: 20px;
+  }
+
+  @media (max-width: 360px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

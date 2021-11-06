@@ -11,10 +11,10 @@ const Toolkit = () => {
       </h1>
       <div className={styles.iconsContainer}>
         <div className={styles.icons}>
-          <ToolkitIconCard data={FRONT_END_ICONS} />
+          <ToolkitIconCard icons={FRONT_END_ICONS} />
         </div>
         <div className={styles.icons}>
-          <ToolkitIconCard data={BACK_END_ICONS} />
+          <ToolkitIconCard icons={BACK_END_ICONS} />
         </div>
       </div>
     </div>

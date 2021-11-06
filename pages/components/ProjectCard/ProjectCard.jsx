@@ -7,7 +7,7 @@ const ProjectCard = ({ projects, setOpenModal, openModal, setProjectId }) => {
       {projects.map((project) => (
         <div key={project.id}>
           <div className={styles.cardContainer}>
-            <Image src={project.image} alt="" layout="fill" />
+            <Image src={project.image} alt="" layout="fill" className={styles.cardImage}  />
           </div>
             <h3 className={styles.cardName}>{project.title}</h3>
             <button

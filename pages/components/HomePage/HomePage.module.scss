@@ -1,50 +1,120 @@
-@import '/styles/variables';
+@use "/styles/buttons/" as btn;
+@import "/styles/variables";
+@import "/styles/mixins";
 
-.container{
-    min-height: 100%;
-    background: linear-gradient(to right, $primary-red 0%,$primary-red  35%,$primary-offWhite 35%,$primary-offWhite 100%);
-    font-family: novecento;
-    padding-left:40px;
-    padding-top:245px;
-    padding-bottom:183px;
-    h1{
-        font-family: Novecento Bold;
-        font-weight: bold;
-        font-size: 160px;
-        line-height: 192px;
+.container {
+  min-height: 100%;
+  background: linear-gradient(
+    to right,
+    $primary-red 0%,
+    $primary-red 35%,
+    $primary-offWhite 35%,
+    $primary-offWhite 100%
+  );
+  font-family: novecento;
+  padding-left: 40px;
+  padding-top: 245px;
+  padding-bottom: 183px;
+
+  @include xs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include md {
+    height: 100vh;
+  }
+
+  @include lg {
+    padding-top: 15%;
+  }
+
+  h1 {
+    font-family: Novecento Bold;
+    font-weight: bold;
+    font-size: 160px;
+    line-height: 192px;
+
+    @include xs {
+      font-size: 31px;
+      line-height: 32px;
     }
 
-    span {
-        color:$primary-red
+    @include sm {
+      font-size: 43px;
+      line-height: 45px;
     }
 
-    h3{
-        font-family: ProximaNova-Regular;
-        font-size: 62.5px;
-        line-height: 64px;
-        font-weight: normal;
+    @include md {
+      font-size: 69px;
+      line-height: 88px;
     }
 
-    button{
-        width: 200px;
-        height: 57px;
-        border-radius: 10px;
-        background: #000000;
-        font-family: Novecento Bold;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 22px;
-        color: #D7D4CA;
-        text-align: center;
-        border:none;
-        margin-top:40px;
+    @include lg {
+      font-size: 95px;
+      line-height: 95px;
     }
 
-    button:hover{
-        cursor: pointer;
+    @include xl{
+      font-size: 115px;
+    }
+  }
+
+  span {
+    color: $primary-red;
+  }
+
+  h3 {
+    font-family: ProximaNova-Regular;
+    font-size: 62.5px;
+    line-height: 64px;
+    font-weight: normal;
+
+    @include xs {
+      font-size: 18px;
+      line-height: 18px;
+      padding-top: 10px;
     }
 
-    button:focus{
-        border:1px solid $primary-offWhite
+    @include sm {
+      font-size: 33px;
+      line-height: 40px;
+      padding-top: 10px;
     }
+
+    @include md {
+      font-size: 25px;
+      line-height: 38px;
+      padding-top: 20px;
+    }
+
+    @include lg {
+      font-size: 55px;
+      line-height: 65px;
+      padding-top: 10px;
+    }
+  }
+
+  button {
+    @include btn.primaryButton;
+    margin-top: 40px;
+
+    @include xs {
+      width: 100px;
+      height: 37px;
+    }
+    @include sm {
+      width: 140px;
+      height: 37px;
+    }
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  button:focus {
+    border: 1px solid $primary-offWhite;
+  }
 }

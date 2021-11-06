@@ -1,14 +1,208 @@
-.container{
-    display:flex;
-    align-items:center;
-    height: 94px;
-    background: #000000;
-    padding-left: 40px;
+@import "/styles/mixins";
+@import "/styles/variables";
 
-   p{
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 94px;
+  background: #000000;
+  padding-left: 40px;
+  @include xs {
+    padding-left: 16px;
+    height: 85px;
+    padding-bottom: 15px;
+  }
+
+  p {
     font-family: Proxima Nova;
     font-size: 18px;
-    line-height: 18px;    
-    color: #D7D4CA;
-   }
+    line-height: 18px;
+    color: #d7d4ca;
+
+    @include xs {
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    @include sm {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  .socialIconsContainer {
+    display: none;
+
+    @include xs {
+      display: flex;
+      padding: 0 10px;
+    }
+
+    @include md {
+      display: flex;
+      padding: 0 20px;
+    }
+
+    @include sm {
+      display: flex;
+      padding: 0 20px;
+    }
+
+    @include lg {
+      display: none;
+      padding: 0 20px;
+    }
+
+    .socialIconsContainer {
+      display: flex;
+    }
+
+    .socialIconsGithub {
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      @include md {
+        height: 50px;
+        width: 50px;
+      }
+
+      @include sm {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .socialIconsTwitter {
+      height: 30px;
+      width: 30px;
+      background: $primary-offWhite;
+      margin-right: 10px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      @include md {
+        height: 50px;
+        width: 50px;
+      }
+
+      @include sm {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .socialIconsFile {
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      margin-left: 12px;
+
+      @include md {
+        height: 50px;
+        width: 50px;
+      }
+
+      @include sm {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .socialIconsLinkedIn {
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $primary-offWhite;
+      overflow: hidden;
+
+      @include md {
+        height: 50px;
+        width: 50px;
+      }
+
+      @include sm {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .githubIcon {
+      height: 30px;
+      width: 50px;
+      color:$primary-offWhite;
+
+      @include md {
+        height: 50px;
+        width: 50px;
+      }
+
+      @include sm {
+        height: 50px;
+        width: 40px;
+      }
+    }
+
+    .twitterIcon {
+      height: 20px;
+      width: 30px;
+      color: $primary-black;
+
+      @include sm {
+        height: 30px;
+        width: 30px;
+      }
+
+      @include md {
+        height: 40px;
+        width: 35px;
+      }
+    }
+
+    .linkedInIcon {
+      height: 20px;
+      width: 25px;
+      background: $primary-offWhite;
+
+      @include md {
+        height: 35px;
+        width: 35px;
+      }
+
+      @include sm {
+        height: 26px;
+        width: 30px;
+      }
+    }
+
+    .fileIcon {
+      height: 30px;
+      width: 30px;
+      color: $primary-offWhite;
+
+      @include md {
+        height: 50px;
+        width: 35px;
+      }
+
+      @include sm {
+        height: 40px;
+        width: 30px;
+      }
+    }
+  }
 }

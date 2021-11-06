@@ -10,10 +10,7 @@ const AboutMe = () => {
       </h1>
       <div className={styles.contentContainer}>
         <div className={styles.image}>
-          <Img
-            src={profileImage}
-            layout="fill"
-          />
+          <Img src={profileImage} layout="fill" />
         </div>
         <div className={styles.paragraph}>
           <p>

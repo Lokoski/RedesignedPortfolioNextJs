@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-library.add(fas,fab);
+library.add(fas, fab);
 
 const Contact = () => {
   return (
@@ -44,6 +44,11 @@ const Contact = () => {
         </div>
       </div>
       <div className={styles.rightContainer}>
+        <div>
+          <h1>
+            Let&apos;s Work together<span>.</span>
+          </h1>
+        </div>
         <ContactForm />
       </div>
     </div>

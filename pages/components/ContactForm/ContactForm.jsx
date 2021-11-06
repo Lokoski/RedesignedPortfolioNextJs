@@ -16,6 +16,8 @@ function ContactMe() {
   const templateID = "template_ID";
   const userID = "user_kg3yLgNkUstEO86KHoLJY";
 
+  console.log(process.env.SERVICE_ID);
+
   const onSubmit = (data, reset) => {
     sendEmail(
       serviceID,
@@ -37,7 +39,7 @@ function ContactMe() {
       .then(() => {
         setSuccessMessage("Thank you!");
       })
-      .catch((err) => `Something went wrong! ${err}`);
+      .catch((err) => console.error(`Something went wrong! ${err}`));
   };
 
   return (
@@ -49,19 +51,19 @@ function ContactMe() {
               placeholder="Full name"
               name="fullName"
               type="text"
-              {...register("fullName", { required: "Please enter your name" })}
+              {...register("fullName", { required: "Please enter your name!" })}
             />{" "}
             <div className={styles.line}></div>
+            <span>{errors.fullName && errors.fullName.message}</span>
           </div>
-          <span>{errors.fullName && errors.fullName.message}</span>
           {/* register an input */}
-          <div>
+          <div className={styles.emailInputContainer}>
             <input
               placeholder="Email"
               className={styles.emailInput}
               type="text"
               {...register("email", {
-                required: "Please enter your email",
+                required: "Please enter your email!",
                 pattern: {
                   value: /^[a-zA-Z0-9._%+-]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]{2,}$/i,
                   message: "Invalid email",
@@ -69,29 +71,31 @@ function ContactMe() {
               })}
             />
             <div className={styles.lineWithMargin}></div>
+            <span>{errors.email && errors.email.message}</span>
           </div>
-          <span>{errors.email && errors.email.message}</span>
         </div>
         <div className={styles.subject}>
           <div>
             <input
               placeholder="Subject"
               type="text"
-              {...register("subject", { required: "Please add a subject" })}
+              {...register("subject", { required: "Please add a subject!" })}
             />
             <div className={styles.line}></div>
+            <span>{errors.subject && errors.subject.message}</span>
           </div>
-          <span>{errors.subject && errors.subject.message}</span>
         </div>
-        <div className={styles.textarea}>
+        <div>
           <textarea
             placeholder="What can I help you with?"
             type="text"
             {...register("message", { required: "Please add a message" })}
           />
-          <span>{errors.message && errors.message.message}</span>
         </div>
-        <span className="success-message">{successMessage}</span>
+        <span>{errors.message && errors.message.message}</span>
+        <span style={{ color: "green", fontSize: "22px" }}>
+          {successMessage}
+        </span>
         <div className={styles.button}>
           <button type="submit">Contact Me</button>
         </div>
