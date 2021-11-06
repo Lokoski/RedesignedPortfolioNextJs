@@ -1,50 +1,185 @@
-@import '/styles/variables';
+@import "/styles/variables";
+@import "/styles/mixins/";
 
-.container{
-    height:100%;
-    background:$primary-offWhite;
-    padding:40px 0 116px 40px;
-    h1{
-        font-family: Novecento Bold;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 72px;
-        line-height: 86px;
-        margin-bottom: 90px;    
-        color:$primary-red    
-    }
+.container {
+  height: 100%;
+  background: $primary-offWhite;
+  padding: 40px 0 116px 40px;
 
-    span{
-        color:$primary-black
-    }
-}
-
-.image{
-    width: 350px;
-    height: 425px;
-    border: 3px solid #000000;
-    border-radius: 10px;
-    position: relative;
-    margin-right: 255px;
-}
-
-.contentContainer{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.paragraph{
-    width: 798px;
-    height: 323px;
-    display:flex;
-    align-items: center;
-    font-family: ProximaNova-Regular;
-    font-size: 24px;
-    line-height: 24px;
+  @include xs {
+    display: flex;
     flex-direction: column;
+    padding: 0;
+  }
 
-    p{
-        padding-bottom: 40px;
+  @include md {
+    padding: 0;
+  }
+
+  @include sm {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  h1 {
+    font-family: Novecento Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 86px;
+    margin-bottom: 90px;
+    color: $primary-red;
+
+    @include xs {
+      font-size: 24px;
+      line-height: 24px;
+      padding: 16px 0 0 16px;
+      margin-bottom: 34px;
     }
+
+    @include md {
+      font-size: 44px;
+      line-height: 29px;
+      padding: 16px 0 0 16px;
+      margin-bottom: 50px;
+    }
+
+    @include lg {
+      padding: 16px 0 0 16px;
+      margin-bottom: 34px;
+    }
+
+    @include sm {
+      font-size: 24px;
+      line-height: 24px;
+      padding: 16px 0 0 16px;
+      margin-bottom: 34px;
+    }
+  }
+
+  span {
+    color: $primary-black;
+  }
+}
+
+.image {
+  width: 450px;
+  height: 425px;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  position: relative;
+  margin-right: 255px;
+
+  @include xs {
+    width: 200px;
+    height: 220px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  @include md {
+    width: 420px;
+    height: 370px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  @include lg {
+    width: 500px;
+    height: 450px;
+    margin: auto;
+    margin: 30px;
+  }
+
+  @include sm {
+    width: 300px;
+    height: 243px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include xs {
+    flex-direction: column;
+  }
+
+  @include md {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include lg {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include sm {
+    flex-direction: column;
+  }
+}
+
+.paragraph {
+  width: 798px;
+  height: 323px;
+  display: flex;
+  align-items: center;
+  font-family: ProximaNova-Regular;
+  font-size: 24px;
+  line-height: 24px;
+  flex-direction: column;
+
+  @include xs {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0 24px;
+  }
+
+  @include md {
+    max-width: 100%;
+    font-size: 22px;
+    line-height: 22px;
+    padding: 0 30px;
+    height: 100%;
+  }
+
+  @include lg {
+    min-width: 100%;
+    font-size: 30px;
+    line-height: 30px;
+    padding: 35px;
+    max-height: 100%;
+  }
+
+  @media (max-width: 360px) {
+    line-height: 14px;
+    font-size: 13px;
+  }
+
+  @include sm {
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 0 24px;
+  }
+
+  p {
+    padding-bottom: 40px;
+
+    @include xs {
+      padding-bottom: 20px;
+    }
+
+    @include md {
+      padding-bottom: 10px;
+    }
+  }
 }

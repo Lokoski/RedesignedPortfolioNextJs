@@ -1,0 +1,14 @@
+@import "variables";
+
+@mixin primaryButton {
+  width: 200px;
+  height: 57px;
+  background: #000000;
+  border-radius: 10px;
+  color: $primary-offWhite;
+  font-family: Novecento Bold;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  border: none;
+}

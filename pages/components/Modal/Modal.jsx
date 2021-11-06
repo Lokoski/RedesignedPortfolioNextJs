@@ -4,9 +4,7 @@ import Image from "next/image";
 const Modal = ({ data, projectId, setOpenModal }) => {
   const filteredData = data && data.filter((data) => data.id === projectId)[0];
 
-  const { title, image, description } = filteredData;
-
-  console.log(title);
+  const { title, image, description, github, liveDemo } = filteredData;
 
   return (
     <div className={styles.container}>
@@ -26,7 +24,8 @@ const Modal = ({ data, projectId, setOpenModal }) => {
           </div>
           <div className={styles.buttons}>
             <button>Github</button>
-            <button>Live Demo</button>
+
+            {liveDemo && <button>Live Demo</button>}
           </div>
         </div>
       </div>

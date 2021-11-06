@@ -1,115 +1,285 @@
-@import '/styles/variables';
+@use "/styles/buttons" as btn;
+@import "/styles/variables";
+@import "/styles/mixins";
 
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 108px;
 
+  span{
+    color: $primary-red;
+  }
 
-.container{
+  @include xs {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 70px;
+  }
+
+  @include md {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 70px;
+  }
+
+  input {
+    border: none;
+    background: inherit;
+    border-bottom: 2px solid black;
+    width: 300px;
+    padding-bottom: 8px;
+    font-family: Proxima Nova;
+    font-size: 18px;
+    line-height: 18px;
+
+    @include xs {
+      flex-direction: row;
+      width: 355px;
+      border-bottom: 1px solid $primary-offWhite;
+      color: $primary-offWhite;
+      margin-bottom: 16px;
+
+      &::placeholder {
+        color: $primary-offWhite;
+      }
+    }
+
+    @include sm {
+      flex-direction: row;
+      width: 355px;
+      border-bottom: 1px solid $primary-offWhite;
+      color: $primary-offWhite;
+      margin-bottom: 16px;
+
+      &::placeholder {
+        color: $primary-offWhite;
+      }
+    }
+
+    @include md {
+      border-bottom: 1px solid $primary-offWhite;
+      color: $primary-offWhite;
+
+      &::placeholder {
+        color: $primary-offWhite;
+      }
+    }
+
+    @include lg {
+      width: 240px;
+      padding: 0px;
+    }
+
+    @media (max-width: 360px) {
+      width: 300px;
+    }
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  textarea {
+    background: #ffffff;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 697px;
+    height: 277px;
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 16px 0 0 16px;
+    resize: none;
+
+    @include xs {
+      width: 355px;
+      height: 165px;
+      padding: 8px 0 0 16px;
+      font-size: 14px;
+      line-height: 14px;
+      max-width: 100%;
+    }
+
+    @include sm {
+      width: 600px;
+      max-width: 90vw;
+      height: 277px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    @include lg {
+      width: 620px;
+      height: 277px;
+      padding: 8px 0 0 16px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    @media (max-width: 360px) {
+      width: 300px;
+    }
+  }
+
+  .nameAndEmail {
     display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    flex-direction:column;
-    padding-top: 108px;
+    justify-content: space-between;
+    margin-bottom: 53px;
 
-    input{
-        border: none;
-        background: inherit;
-        border-bottom: 2px solid black;
-        width: 300px;
-        padding-bottom: 8px;
-        font-family: Proxima Nova;
-        font-size: 18px;
-        line-height: 18px;
+    @include xs {
+      flex-direction: column;
+      margin-bottom: 0px;
     }
 
-    input:focus, textarea:focus{
-        outline: none;
+    @include sm {
+      flex-direction: column;
+      margin-bottom: 0px;
+    }
+  }
+
+  .emailInput,
+  .emailInputContainer > span {
+    margin-left: 93px;
+
+    @include xs {
+      margin-left: 0;
     }
 
-    textarea{
-        background: #FFFFFF;
-        border: 2px solid #000000;
-        box-sizing: border-box;
-        border-radius: 5px;
-        width: 697px;
-        height: 277px;
-        font-family: Proxima Nova;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 18px;
-        padding: 16px 0 0 16px;
-        resize: none;
-
+    @include sm {
+      margin-left: 0;
     }
+  }
 
-    .nameAndEmail{
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 53px;
+  .subject {
+    margin-bottom: 90px;
+
+    @include xs {
+      margin-bottom: 24px;
     }
+  }
 
-    .emailInput{
-        margin-left: 93px;
-    }
-
-   .subject{
-       margin-bottom: 90px;
-   }
-
-   .button{
+  .button {
     display: flex;
     justify-content: flex-end;
-    padding-top:36px;
-    padding-bottom:104px;
+    padding-top: 36px;
+    padding-bottom: 104px;
 
-    button{
-        width: 196px;
-        height: 57px;
-        background: #000000;
-        border-radius: 10px;
-        text-align: center;
-        color: #D7D4CA;
-        font-size: 18px;
-        line-height: 22px;
-        font-family: Novecento Bold;
-        border:none;
+    @include xs {
+      justify-content: center;
+      padding-bottom: 24px;
     }
 
-    button:hover{
-        cursor: pointer;
+    @include md {
+      padding-bottom: 60px;
     }
 
-    button:focus{
-        border:1px solid $primary-red
-    }
-   }
+    button {
+      @include btn.primaryButton;
 
-   .line {
+      @include xs {
+        width: 200px;
+      }
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    button:focus {
+      border: 1px solid $primary-red;
+    }
+  }
+
+  .line {
     position: relative;
     top: -2px;
     width: 0;
     height: 3px;
     background: $primary-red;
+    @include xs {
+      background: $primary-black;
+      height: 2px;
+    }
+
+    @include sm {
+      background: $primary-black;
+      height: 2px;
+    }
+
+    @include md {
+      background: $primary-black;
+      height: 2px;
+    }
   }
 
-  .lineWithMargin{
+  .lineWithMargin {
     position: relative;
     top: -2px;
     width: 0;
     height: 3px;
     background: $primary-red;
+
+    @include xs {
+      background: $primary-black;
+      height: 2px;
+    }
+
+    @include sm {
+      background: $primary-black;
+      height: 2px;
+    }
+
+    @include md {
+      background: $primary-black;
+      height: 2px;
+    }
   }
 
-  input:focus+.line{
+  input:focus + .line {
     max-width: 300px;
     width: 100%;
-    transition: width 0.50s ease-in-out;
+    transition: width 0.5s ease-in-out;
+
+    @include xs {
+      max-width: 355px;
+      transition: width 0.5s ease-in-out;
+    }
+
+    @include sm {
+      max-width: 355px;
+      transition: width 0.5s ease-in-out;
+    }
+    @include lg {
+      max-width: 240px;
+    }
   }
 
-  input:focus+.lineWithMargin{
+  input:focus + .lineWithMargin {
     max-width: 300px;
     width: 100%;
-    transition: width 0.50s ease-in-out;
+    transition: width 0.5s ease-in-out;
     margin-left: 93px;
+
+    @include xs {
+      max-width: 355px;
+      margin-left: 0px;
+    }
+
+    @include sm {
+      max-width: 355px;
+      margin-left: 0px;
+    }
+
+    @include lg {
+      max-width: 240px;
+    }
   }
 }

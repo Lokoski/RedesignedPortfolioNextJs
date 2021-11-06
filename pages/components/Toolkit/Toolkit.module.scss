@@ -1,33 +1,81 @@
-@import '/styles/variables';
+@import "/styles/variables";
+@import "/styles/mixins";
+.container {
+  height: 100%;
+  background: $primary-black;
 
-.container{
-    height: 100%;
-    background: $primary-black;
-    padding:40px 0 0px 40px;
+  @include xs {
+    padding-bottom: 60px;
+  }
 
-    h1{
-        font-family: Novecento Bold;
-font-style: normal;
-font-weight: bold;
-font-size: 72px;
-line-height: 86px;
-color: $primary-offWhite
+  @include sm {
+    padding-bottom: 60px;
+  }
+
+  h1 {
+    font-family: Novecento Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 86px;
+    color: $primary-offWhite;
+    padding: 40px 0 0px 40px;
+
+    @include xs {
+      font-size: 24px;
+      line-height: 29px;
+      padding: 16px 0 0px 16px;
     }
 
-    span{
-        color: $primary-red
+    @include md {
+      font-size: 44px;
+      line-height: 29px;
+      padding: 16px 0 0 16px;
     }
 
-    .iconsContainer{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding-top: 124px; 
-        padding-bottom: 110px;       
+    @include sm {
+      font-size: 24px;
+      line-height: 24px;
+      padding: 16px 0 0px 16px;
+    }
+  }
+
+  span {
+    color: $primary-red;
+  }
+
+  .iconsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 124px;
+    padding-bottom: 110px;
+
+    @include xs {
+      padding: 0 12px;
     }
 
-    .icons{
-        padding-bottom: 145px;
+    @include md {
+      padding: 0 100px;
     }
+
+    @include sm {
+      padding: 0 60px;
+    }
+  }
+
+  .icons {
+    padding-bottom: 145px;
+    @include xs {
+      padding: 0px;
+    }
+
+    @include md {
+      padding: 30px 0;
+    }
+
+    @include sm {
+      padding: 20px 0;
+    }
+  }
 }

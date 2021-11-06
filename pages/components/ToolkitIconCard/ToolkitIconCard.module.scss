@@ -1,31 +1,107 @@
+@import "/styles/mixins";
+.container {
+  display: flex;
 
-.container{
+  @include xs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include md {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include sm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .imageContainer {
+    margin-bottom: 16px;
+    position: relative;
+    height: 50px;
+    width: 100px;
+    max-width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    .image{
-        display: flex;
-        margin-bottom: 16px;
-        position: relative;
-        height: 50px;
-        width: 50px;
+    @include xs {
+      height: 40px;
+      width: 50px;
+      margin: 20px 0;
     }
 
-    .contentContainer{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        height: 100%;
-        margin-right: 64px;
-
+    @include md {
+      height: 55px;
+      width: 60px;
+      margin: 40px;
     }
-    .text{
-        font-family: Novecento Bold;
+
+    @include sm {
+      height: 40px;
+      width: 40px;
+      margin: 20px 0;
+    }
+
+    @include lg {
+      height: 50px;
+      width: 50px;
+      margin: 20px 0;
+    }
+    @media (max-width: 360px) {
+      height: 30px;
+      width: 30px;
+      margin: 10px 0;
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    margin-right: 64px;
+
+    @include xs {
+      align-items: space-around;
+      padding: 15px 24px;
+      margin: 0;
+    }
+
+    @include md {
+      align-items: space-around;
+      padding: 15px 44px;
+      margin: 0;
+    }
+
+    @include sm {
+      align-items: space-around;
+      padding: 15px 24px;
+      margin: 0;
+    }
+  }
+  .text {
+    font-family: Novecento Bold;
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
-    color: #FFFFFF;
-    }
-}
+    color: #ffffff;
 
+    @include xs {
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    @include sm {
+      font-size: 22px;
+      line-height: 20px;
+    }
+  }
+}
