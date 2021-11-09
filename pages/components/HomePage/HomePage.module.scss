@@ -35,6 +35,7 @@
     font-weight: bold;
     font-size: 160px;
     line-height: 192px;
+    text-transform: uppercase;
 
     @include xs {
       font-size: 31px;
