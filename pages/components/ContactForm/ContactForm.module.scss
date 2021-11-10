@@ -10,7 +10,7 @@
   flex-direction: column;
   padding-top: 108px;
 
-  span{
+  span {
     color: $primary-red;
   }
 
@@ -218,6 +218,10 @@
       background: $primary-black;
       height: 2px;
     }
+  }
+
+  .errorWithMargin {
+    margin-left: 93px;
   }
 
   .lineWithMargin {

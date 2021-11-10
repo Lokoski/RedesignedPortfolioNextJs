@@ -107,6 +107,12 @@
     overflow: hidden;
   }
 
+  .socialIconsGithub:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+
   .socialIconsTwitter {
     height: 45px;
     width: 45px;
@@ -117,6 +123,12 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+  }
+
+  .socialIconsTwitter:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
   }
 
   .socialIconsFile {
@@ -130,6 +142,12 @@
     margin-left: 12px;
   }
 
+  .socialIconsFile:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+
   .socialIconsLinkedIn {
     height: 45px;
     width: 45px;
@@ -140,6 +158,12 @@
     align-items: center;
     background: $primary-offWhite;
     overflow: hidden;
+  }
+
+  .socialIconsLinkedIn:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
   }
 
   .githubIcon {

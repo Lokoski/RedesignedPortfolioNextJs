@@ -52,8 +52,9 @@ function ContactMe() {
               {...register("fullName", { required: "Please enter your name" })}
             />{" "}
             <div className={styles.line}></div>
+            <span>{errors.fullName && errors.fullName.message}</span>
           </div>
-          <span>{errors.fullName && errors.fullName.message}</span>
+
           {/* register an input */}
           <div>
             <input
@@ -69,8 +70,8 @@ function ContactMe() {
               })}
             />
             <div className={styles.lineWithMargin}></div>
+            <span className={styles.errorWithMargin}>{errors.email && errors.email.message}</span>
           </div>
-          <span>{errors.email && errors.email.message}</span>
         </div>
         <div className={styles.subject}>
           <div>
@@ -89,8 +90,8 @@ function ContactMe() {
             type="text"
             {...register("message", { required: "Please add a message" })}
           />
-          <span>{errors.message && errors.message.message}</span>
         </div>
+        <span>{errors.message && errors.message.message}</span>
         <span className="success-message">{successMessage}</span>
         <div className={styles.button}>
           <button type="submit">Contact Me</button>

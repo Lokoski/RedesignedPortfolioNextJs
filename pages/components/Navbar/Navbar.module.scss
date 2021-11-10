@@ -1,0 +1,214 @@
+// .scrollbarContainer{
+//     display: flex;
+//     width: 100%;
+//     justify-content: flex-end;
+//     padding-right: 37px;
+// }
+
+// .scrollbar {
+//   width: 5px;
+//   height: 600px;
+//   overflow: scroll;
+//   overflow: hidden;
+//   position: fixed;
+//   background: red;
+// }
+
+.bar {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+  margin: auto auto 0;
+  width: 300px;
+  max-width: calc(100% - 30px);
+  position: fixed;
+  z-index: 10000;
+  transform: rotate(90deg);
+}
+.barInput {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.barInput:checked ~ .barView:nth-child(10):after {
+  transition-delay: -0.05s;
+}
+.barInput:checked ~ .barView:nth-child(10) .barButton:before {
+  transition-delay: 0.01s;
+}
+.barInput:checked ~ .barView:nth-child(8):after {
+  transition-delay: 0.05s;
+}
+.barInput:checked ~ .barView:nth-child(8) .barButton:before {
+  transition-delay: 0.11s;
+}
+.barInput:checked ~ .barView:nth-child(6):after {
+  transition-delay: 0.15s;
+}
+.barInput:checked ~ .barView:nth-child(6) .barButton:before {
+  transition-delay: 0.21s;
+}
+.barInput:checked ~ .barView:nth-child(4):after {
+  transition-delay: 0.25s;
+}
+.barInput:checked ~ .barView:nth-child(4) .barButton:before {
+  transition-delay: 0.31s;
+}
+.barInput:checked ~ .barView:nth-child(2):after {
+  transition-delay: 0.35s;
+}
+.barInput:checked ~ .barView:nth-child(2) .barButton:before {
+  transition-delay: 0.41s;
+}
+.barInput:checked ~ .barView:after {
+  transform: scaleX(1);
+}
+.barInput:checked ~ .barView .barButton:before {
+  transform: none;
+  opacity: 1;
+}
+.barInput:checked + .barView .barButton:after {
+  opacity: 1;
+  -webkit-animation: bouncing 0.6s cubic-bezier(0, 0, 0.74, 1.04) infinite;
+  animation: bouncing 0.6s cubic-bezier(0, 0, 0.74, 1.04) infinite;
+}
+.barView {
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+}
+.barView:after {
+  height: 2px;
+  top: calc(50% - 1px);
+  transition: transform 0.06s cubic-bezier(0, 0.72, 0.58, 1);
+  transform: scaleX(0);
+  background: #ffb732;
+  transform-origin: left;
+  z-index: 1;
+}
+.barView:not(:last-child):before,
+.barView:not(:last-child):after {
+  content: "";
+  width: calc(100% - 24px);
+  position: absolute;
+  right: calc(50% + 12px);
+}
+.barView:not(:last-child):before {
+  height: 6px;
+  top: calc(50% - 3px);
+  background: #3c6997;
+}
+.barView:not(:last-child):nth-child(2):after {
+  transition-delay: 0s;
+}
+.barView:not(:last-child):nth-child(2) .barButton:before {
+  transition-delay: 0.06s;
+}
+.barView:not(:last-child):nth-child(4):after {
+  transition-delay: 0.1s;
+}
+.barView:not(:last-child):nth-child(4) .barButton:before {
+  transition-delay: 0.16s;
+}
+.barView:not(:last-child):nth-child(6):after {
+  transition-delay: 0.2s;
+}
+.barView:not(:last-child):nth-child(6) .barButton:before {
+  transition-delay: 0.26s;
+}
+.barView:not(:last-child):nth-child(8):after {
+  transition-delay: 0.3s;
+}
+.barView:not(:last-child):nth-child(8) .barButton:before {
+  transition-delay: 0.36s;
+}
+.barView:not(:last-child):nth-child(10):after {
+  transition-delay: 0.4s;
+}
+.barView:not(:last-child):nth-child(10) .barButton:before {
+  transition-delay: 0.46s;
+}
+.barButton {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid #3c6997;
+  position: relative;
+  cursor: pointer;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3),
+    2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+.barButton:hover:after {
+  transform: none;
+  opacity: 1;
+}
+.barButton:before,
+.barButton:after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+.barButton:before {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #ffdd4a, #fe9000);
+  transform: scale(0.3);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0, 0.72, 0.58, 1);
+}
+.barButton:after {
+  border: 8px solid transparent;
+  border-top-color: #5adbff;
+  bottom: calc(100% + 10px);
+  left: calc(50% - 8px);
+  transform: translateY(-10px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0, 0, 0, 1.97);
+}
+
+.command {
+  font-family: "Ubuntu Mono", monospace;
+  letter-spacing: 1px;
+  margin: 30px auto auto;
+  -webkit-animation: fade 1s ease infinite;
+  animation: fade 1s ease infinite;
+}
+
+@-webkit-keyframes bouncing {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes bouncing {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+@-webkit-keyframes fade {
+  50% {
+    opacity: 0.3;
+  }
+}
+@keyframes fade {
+  50% {
+    opacity: 0.3;
+  }
+}
