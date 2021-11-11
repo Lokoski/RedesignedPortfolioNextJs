@@ -23,7 +23,7 @@ const ProjectCard = ({ projects, setOpenModal, openModal, setProjectId }) => {
                       setProjectId(project.id);
                     }}
                   >
-                    See More
+                    Learn more
                   </button>
                 </div>
               </div>

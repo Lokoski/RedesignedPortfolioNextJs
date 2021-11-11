@@ -8,7 +8,7 @@ import onClickOutside from "react-onclickoutside";
 const Projects = () => {
   const [openModal, setOpenModal] = useState(false);
 
-  Projects.handleClickOutside = () => setOpenModal(false);
+  // Projects.handleClickOutside = () => setOpenModal(false);
 
   const [projectId, setProjectId] = useState();
   return (
@@ -37,8 +37,9 @@ const Projects = () => {
   );
 };
 
-const clickOutsideConfig = {
-  handleClickOutside: () => Projects.handleClickOutside,
-};
+// const clickOutsideConfig = {
+//   handleClickOutside: () => Projects.handleClickOutside,
+// };
 
-export default onClickOutside(Projects, clickOutsideConfig);
+// export default onClickOutside(Projects, clickOutsideConfig);
+export default Projects;
