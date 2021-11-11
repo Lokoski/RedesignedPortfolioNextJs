@@ -22,6 +22,10 @@
     padding: 0;
   }
 
+  .image {
+    object-fit: cover;
+  }
+
   h1 {
     font-family: Novecento Bold;
     font-style: normal;
@@ -64,7 +68,7 @@
   }
 }
 
-.image {
+.imageContainer {
   width: 450px;
   height: 425px;
   border: 3px solid #000000;

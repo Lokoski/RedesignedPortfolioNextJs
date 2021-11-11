@@ -9,10 +9,11 @@ const AboutMe = () => {
         About Me<span>.</span>
       </h1>
       <div className={styles.contentContainer}>
-        <div className={styles.image}>
+        <div className={styles.imageContainer}>
           <Img
             src={profileImage}
             layout="fill"
+            className={styles.image}
           />
         </div>
         <div className={styles.paragraph}>

@@ -24,7 +24,9 @@ body {
     /* chrome firefox opera Safari, Android, iOS 4.2+*/
     url("https://db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.svg#ProximaNova-Regular") format("svg");
   /* iOS 4.1- */
+}
 
+@font-face {
   font-family: "Novecento Bold";
   src: url("https://db.onlinewebfonts.com/t/a0c08669717ba4342437aef1f5da1bc8.eot");
   /* IE9*/

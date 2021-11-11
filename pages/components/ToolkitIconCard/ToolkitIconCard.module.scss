@@ -21,7 +21,7 @@
     margin-bottom: 16px;
     position: relative;
     height: 50px;
-    width: 100px;
+    width: 150px;
     max-width: 100%;
     display: flex;
     align-items: center;
@@ -79,6 +79,16 @@
     @include sm {
       align-items: space-around;
       padding: 15px 24px;
+      margin: 0;
+    }
+
+    @include lg {
+      padding: 0 30px;
+      margin: 0;
+    }
+
+    @include xl {
+      padding: 0 15px;
       margin: 0;
     }
   }

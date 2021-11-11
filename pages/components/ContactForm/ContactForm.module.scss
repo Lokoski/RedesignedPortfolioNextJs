@@ -204,14 +204,17 @@
     width: 0;
     height: 3px;
     background: $primary-red;
+
     @include xs {
       background: $primary-black;
       height: 2px;
+      top: -18px;
     }
 
     @include sm {
       background: $primary-black;
       height: 2px;
+      top: -18px;
     }
 
     @include md {
@@ -234,11 +237,13 @@
     @include xs {
       background: $primary-black;
       height: 2px;
+      top: -18px;
     }
 
     @include sm {
       background: $primary-black;
       height: 2px;
+      top: -18px;
     }
 
     @include md {
@@ -254,12 +259,10 @@
 
     @include xs {
       max-width: 355px;
-      transition: width 0.5s ease-in-out;
     }
 
     @include sm {
       max-width: 355px;
-      transition: width 0.5s ease-in-out;
     }
     @include lg {
       max-width: 240px;

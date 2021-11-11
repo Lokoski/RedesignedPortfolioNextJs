@@ -70,7 +70,9 @@ function ContactMe() {
               })}
             />
             <div className={styles.lineWithMargin}></div>
-            <span className={styles.errorWithMargin}>{errors.email && errors.email.message}</span>
+            <span className={styles.errorWithMargin}>
+              {errors.email && errors.email.message}
+            </span>
           </div>
         </div>
         <div className={styles.subject}>
@@ -92,7 +94,7 @@ function ContactMe() {
           />
         </div>
         <span>{errors.message && errors.message.message}</span>
-        <span className="success-message">{successMessage}</span>
+        <span>{successMessage}</span>
         <div className={styles.button}>
           <button type="submit">Contact Me</button>
         </div>
