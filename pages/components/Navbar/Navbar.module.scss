@@ -1,214 +1,368 @@
-// .scrollbarContainer{
+@import "/styles/variables";
+@import "/styles/mixins";
+
+.container {
+  z-index: 100000;
+  display: flex;
+  position: relative;
+
+  .logoContainer {
+    display: none;
+  }
+
+  .menuToggle {
+    span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+
+      background: $primary-red;
+
+      transform-origin: 4px 4px;
+
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        opacity 0.3s ease-in-out;
+    }
+  }
+
+  .clicked > span:nth-last-child(2) {
+    transform-origin: 50% 0%;
+  }
+
+  .clicked > span {
+    opacity: 1;
+    transform: rotate(-40deg) translate(4px, 1px);
+    background: $primary-red;
+  }
+
+  .clicked > span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  .clicked > span:nth-last-child(2) {
+    transform: rotate(40deg) translate(2px, 0px);
+  }
+
+  .buttonContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100000;
+    padding: 1.5% 2%;
+
+    @include xs {
+      padding: 18px 10px;
+    }
+
+    @include sm {
+      padding: 22px 15px;
+    }
+
+    @include md {
+      padding: 26px 20px;
+    }
+
+    @include lg {
+      padding: 2.75% 2%;
+    }
+
+    @include xl {
+      padding: 25px 20px;
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-60px);
+    }
+  }
+
+  .navContainer {
+    padding: 0;
+    height: 73px;
+    width: 100%;
+    position: fixed;
+    background: $primary-black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: slideIn 0.6s ease;
+
+    @include xs {
+      min-height: 210px;
+      justify-content: center;
+    }
+
+    @include sm {
+      min-height: 210px;
+      justify-content: center;
+    }
+
+    @include lg {
+      height: 6%;
+      font-size: 20px;
+    }
+
+    .logoContainer {
+      display: none;
+      height: 55px;
+      width: 100px;
+
+      @include xs {
+        top: 0;
+        left: 0;
+        margin-top: 2%;
+        display: flex;
+        padding-left: 10px;
+        position: absolute;
+      }
+
+      @include sm {
+        top: 0;
+        left: 0;
+        margin-top: 2%;
+        display: flex;
+        padding-left: 10px;
+        position: absolute;
+      }
+    }
+
+    .links {
+      display: flex;
+      text-align: center;
+
+      @include xs {
+        padding-top: 7%;
+        flex-direction: column;
+        font-size: 17px;
+        height: 100%;
+        justify-content: center;
+      }
+
+      @include sm {
+        padding-top: 30px;
+        flex-direction: column;
+        font-size: 18px;
+        height: 100%;
+        justify-content: center;
+      }
+
+      @include md {
+        font-size: 16px;
+      }
+      a {
+        color: $primary-offWhite;
+        text-decoration: none;
+        padding: 5px 40px;
+
+        @include xs {
+          padding: 8px 40px;
+        }
+
+        @include md {
+          padding: 5px 20px;
+        }
+      }
+    }
+  }
+
+  .socialIconsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 25%;
+    padding-right: 80px;
+
+    @include xs {
+      display: none;
+      padding: 0 10px;
+    }
+
+    @include md {
+      display: none;
+    }
+
+    @include sm {
+      display: none;
+      padding: 0 20px;
+    }
+
+    @include lg {
+      display: flex;
+      padding: 0 20px;
+      margin-right: 50px;
+    }
+
+    .socialIconsGithub {
+      height: 30px;
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      @include md {
+        height: 50px;
+        width: 50px;
+      }
+
+      @include sm {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .socialIconsTwitter {
+      height: 30px;
+      width: 30px;
+      background: $primary-offWhite;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      @include md {
+        height: 50px;
+        width: 50px;
+      }
+
+      @include sm {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .socialIconsFile {
+      height: 30px;
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include md {
+        height: 50px;
+        width: 50px;
+      }
+
+      @include sm {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .socialIconsLinkedIn {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $primary-offWhite;
+      overflow: hidden;
+
+      @include md {
+        height: 50px;
+        width: 50px;
+      }
+
+      @include sm {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .githubIcon {
+      height: 30px;
+      width: 50px;
+      color: $primary-offWhite;
+
+      @include md {
+        height: 50px;
+        width: 50px;
+      }
+
+      @include sm {
+        height: 50px;
+        width: 40px;
+      }
+    }
+
+    .twitterIcon {
+      height: 20px;
+      width: 30px;
+      color: $primary-black;
+
+      @include sm {
+        height: 30px;
+        width: 30px;
+      }
+
+      @include md {
+        height: 40px;
+        width: 35px;
+      }
+    }
+
+    .linkedInIcon {
+      height: 20px;
+      width: 25px;
+      background: $primary-offWhite;
+
+      @include md {
+        height: 35px;
+        width: 35px;
+      }
+
+      @include sm {
+        height: 26px;
+        width: 30px;
+      }
+    }
+
+    .fileIcon {
+      height: 30px;
+      width: 30px;
+      color: $primary-offWhite;
+
+      @include md {
+        height: 50px;
+        width: 35px;
+      }
+
+      @include sm {
+        height: 40px;
+        width: 30px;
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 767px) {
+//   .buttonContainer {
+//     padding-top: 15px !important;
+//   }
+
+//   .socialIconsContainer {
+//     display: none !important;
+//   }
+
+//   .links {
 //     display: flex;
-//     width: 100%;
-//     justify-content: flex-end;
-//     padding-right: 37px;
+//     flex-direction: column !important;
+//     margin: 0 !important;
+//     padding: 0 !important;
+//     height: 100% !important;
+//   }
+
+//   .logoContainer {
+//     min-width: 100%;
+//     display: flex !important;
+//     margin: 0 !important;
+//     padding: 0 !important;
+//     padding-left: 10px !important;
+//   }
 // }
-
-// .scrollbar {
-//   width: 5px;
-//   height: 600px;
-//   overflow: scroll;
-//   overflow: hidden;
-//   position: fixed;
-//   background: red;
-// }
-
-.bar {
-  display: flex;
-  flex-direction: row-reverse;
-  height: 100%;
-  margin: auto auto 0;
-  width: 300px;
-  max-width: calc(100% - 30px);
-  position: fixed;
-  z-index: 10000;
-  transform: rotate(90deg);
-}
-.barInput {
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-.barInput:checked ~ .barView:nth-child(10):after {
-  transition-delay: -0.05s;
-}
-.barInput:checked ~ .barView:nth-child(10) .barButton:before {
-  transition-delay: 0.01s;
-}
-.barInput:checked ~ .barView:nth-child(8):after {
-  transition-delay: 0.05s;
-}
-.barInput:checked ~ .barView:nth-child(8) .barButton:before {
-  transition-delay: 0.11s;
-}
-.barInput:checked ~ .barView:nth-child(6):after {
-  transition-delay: 0.15s;
-}
-.barInput:checked ~ .barView:nth-child(6) .barButton:before {
-  transition-delay: 0.21s;
-}
-.barInput:checked ~ .barView:nth-child(4):after {
-  transition-delay: 0.25s;
-}
-.barInput:checked ~ .barView:nth-child(4) .barButton:before {
-  transition-delay: 0.31s;
-}
-.barInput:checked ~ .barView:nth-child(2):after {
-  transition-delay: 0.35s;
-}
-.barInput:checked ~ .barView:nth-child(2) .barButton:before {
-  transition-delay: 0.41s;
-}
-.barInput:checked ~ .barView:after {
-  transform: scaleX(1);
-}
-.barInput:checked ~ .barView .barButton:before {
-  transform: none;
-  opacity: 1;
-}
-.barInput:checked + .barView .barButton:after {
-  opacity: 1;
-  -webkit-animation: bouncing 0.6s cubic-bezier(0, 0, 0.74, 1.04) infinite;
-  animation: bouncing 0.6s cubic-bezier(0, 0, 0.74, 1.04) infinite;
-}
-.barView {
-  display: flex;
-  flex-grow: 1;
-  position: relative;
-}
-.barView:after {
-  height: 2px;
-  top: calc(50% - 1px);
-  transition: transform 0.06s cubic-bezier(0, 0.72, 0.58, 1);
-  transform: scaleX(0);
-  background: #ffb732;
-  transform-origin: left;
-  z-index: 1;
-}
-.barView:not(:last-child):before,
-.barView:not(:last-child):after {
-  content: "";
-  width: calc(100% - 24px);
-  position: absolute;
-  right: calc(50% + 12px);
-}
-.barView:not(:last-child):before {
-  height: 6px;
-  top: calc(50% - 3px);
-  background: #3c6997;
-}
-.barView:not(:last-child):nth-child(2):after {
-  transition-delay: 0s;
-}
-.barView:not(:last-child):nth-child(2) .barButton:before {
-  transition-delay: 0.06s;
-}
-.barView:not(:last-child):nth-child(4):after {
-  transition-delay: 0.1s;
-}
-.barView:not(:last-child):nth-child(4) .barButton:before {
-  transition-delay: 0.16s;
-}
-.barView:not(:last-child):nth-child(6):after {
-  transition-delay: 0.2s;
-}
-.barView:not(:last-child):nth-child(6) .barButton:before {
-  transition-delay: 0.26s;
-}
-.barView:not(:last-child):nth-child(8):after {
-  transition-delay: 0.3s;
-}
-.barView:not(:last-child):nth-child(8) .barButton:before {
-  transition-delay: 0.36s;
-}
-.barView:not(:last-child):nth-child(10):after {
-  transition-delay: 0.4s;
-}
-.barView:not(:last-child):nth-child(10) .barButton:before {
-  transition-delay: 0.46s;
-}
-.barButton {
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin: auto;
-  border-radius: 50%;
-  border: 3px solid #3c6997;
-  position: relative;
-  cursor: pointer;
-  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3),
-    2px 2px 8px rgba(0, 0, 0, 0.1);
-}
-.barButton:hover:after {
-  transform: none;
-  opacity: 1;
-}
-.barButton:before,
-.barButton:after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-}
-.barButton:before {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, #ffdd4a, #fe9000);
-  transform: scale(0.3);
-  opacity: 0;
-  transition-property: transform, opacity;
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0, 0.72, 0.58, 1);
-}
-.barButton:after {
-  border: 8px solid transparent;
-  border-top-color: #5adbff;
-  bottom: calc(100% + 10px);
-  left: calc(50% - 8px);
-  transform: translateY(-10px);
-  opacity: 0;
-  transition-property: transform, opacity;
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0, 0, 0, 1.97);
-}
-
-.command {
-  font-family: "Ubuntu Mono", monospace;
-  letter-spacing: 1px;
-  margin: 30px auto auto;
-  -webkit-animation: fade 1s ease infinite;
-  animation: fade 1s ease infinite;
-}
-
-@-webkit-keyframes bouncing {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-}
-
-@keyframes bouncing {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-}
-@-webkit-keyframes fade {
-  50% {
-    opacity: 0.3;
-  }
-}
-@keyframes fade {
-  50% {
-    opacity: 0.3;
-  }
-}

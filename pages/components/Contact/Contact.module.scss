@@ -2,7 +2,7 @@
 @import "/styles/mixins";
 
 .container {
-  height: 100%;
+  height: 90vh;
   display: flex;
   h1 {
     font-family: Novecento Bold;
@@ -133,7 +133,7 @@
 
   .socialIconsFile {
     height: 45px;
-    width: 34px;
+    width: 32px;
     margin-right: 40px;
     border-radius: 50%;
     display: flex;

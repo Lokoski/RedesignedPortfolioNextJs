@@ -99,6 +99,10 @@
     padding: 16px 0 0 16px;
     resize: none;
 
+    @media screen and (max-width: 300px) {
+      width: 697px;
+    }
+
     @include xs {
       width: 355px;
       height: 165px;
@@ -125,7 +129,7 @@
     }
 
     @media (max-width: 360px) {
-      width: 300px;
+      width: 280px;
     }
   }
 

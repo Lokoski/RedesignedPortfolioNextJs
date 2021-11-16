@@ -20,14 +20,60 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    background: linear-gradient(
+      to right,
+      $primary-red 0vw,
+      $primary-red 45vw,
+      $primary-offWhite 45vw,
+      $primary-offWhite 100vw
+    );
+  }
+
+  @include sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: linear-gradient(
+      to right,
+      $primary-red 0vw,
+      $primary-red 40vw,
+      $primary-offWhite 40vw,
+      $primary-offWhite 100vw
+    );
   }
 
   @include md {
     height: 100vh;
+    background: linear-gradient(
+      to right,
+      $primary-red 0vw,
+      $primary-red 38vw,
+      $primary-offWhite 38vw,
+      $primary-offWhite 100vw
+    );
   }
 
   @include lg {
     padding-top: 15%;
+    background: linear-gradient(
+      to right,
+      $primary-red 0vw,
+      $primary-red 36.5vw,
+      $primary-offWhite 36.5vw,
+      $primary-offWhite 100vw
+    );
+  }
+
+  @include xl {
+    background: linear-gradient(
+      to right,
+      $primary-red 0vw,
+      $primary-red 36vw,
+      $primary-offWhite 36vw,
+      $primary-offWhite 100vw
+    );
   }
 
   h1 {

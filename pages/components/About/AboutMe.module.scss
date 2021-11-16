@@ -74,7 +74,7 @@
   border: 3px solid #000000;
   border-radius: 10px;
   position: relative;
-  margin-right: 255px;
+  margin-right: 250px;
 
   @include xs {
     width: 200px;
@@ -132,7 +132,7 @@
 }
 
 .paragraph {
-  width: 798px;
+  width: 42%;
   height: 323px;
   display: flex;
   align-items: center;
@@ -142,14 +142,14 @@
   flex-direction: column;
 
   @include xs {
-    max-width: 100%;
+    width: 100%;
     font-size: 14px;
     line-height: 16px;
     padding: 0 24px;
   }
 
   @include md {
-    max-width: 100%;
+    width: 90%;
     font-size: 22px;
     line-height: 22px;
     padding: 0 30px;
@@ -157,7 +157,7 @@
   }
 
   @include lg {
-    min-width: 100%;
+    min-width: 90%;
     font-size: 30px;
     line-height: 30px;
     padding: 35px;
@@ -170,7 +170,7 @@
   }
 
   @include sm {
-    max-width: 100%;
+    width: 100%;
     font-size: 18px;
     line-height: 18px;
     padding: 0 24px;

@@ -1,6 +1,7 @@
 import styles from "./HomePage.module.scss";
 import Link from "next/link";
 import Navbar from "../Navbar/Navbar";
+
 const HomePage = () => {
   return (
     <>

@@ -72,6 +72,11 @@
     width: 220px;
   }
 
+  @media (min-width: 1440px) {
+    height: 600px;
+    width: 700px;
+  }
+
   @include sm {
     height: 225px;
     width: 225px;
