@@ -7,11 +7,11 @@ config.autoAddCss = false; /* eslint-disable import/first */
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </>
+    </div>
   );
 }
 

@@ -54,6 +54,10 @@
     z-index: 100000;
     padding: 1.5% 2%;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @include xs {
       padding: 18px 10px;
     }
@@ -158,6 +162,7 @@
         color: $primary-offWhite;
         text-decoration: none;
         padding: 5px 40px;
+        width: 100%;
 
         @include xs {
           padding: 8px 40px;
@@ -165,6 +170,12 @@
 
         @include md {
           padding: 5px 20px;
+        }
+
+        &:focus,
+        &:hover {
+          transform: scale(1.15);
+          transition: all 0.2s ease-in-out;
         }
       }
     }

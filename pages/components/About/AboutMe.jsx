@@ -4,17 +4,13 @@ import profileImage from "../../../public/images/profileImage.jpeg";
 
 const AboutMe = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="about">
       <h1>
         About Me<span>.</span>
       </h1>
       <div className={styles.contentContainer}>
         <div className={styles.imageContainer}>
-          <Img
-            src={profileImage}
-            layout="fill"
-            className={styles.image}
-          />
+          <Img src={profileImage} layout="fill" className={styles.image} />
         </div>
         <div className={styles.paragraph}>
           <p>

@@ -1,7 +1,7 @@
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -37,19 +37,25 @@ const Navbar = () => {
       {openNavBar && (
         <div className={styles.navContainer}>
           <div className={styles.logoContainer}>
-            <Image src={logo} alt="Logo" height="20" width="60" className={styles.logo} />
+            <Image
+              src={logo}
+              alt="Logo"
+              height="20"
+              width="60"
+              className={styles.logo}
+            />
           </div>
           <div className={styles.links} ref={ref}>
-            <Link href="/">
+            <Link href="#home">
               <a href="">Home</a>
             </Link>
-            <Link href="">
+            <Link href="#about">
               <a href="">About</a>
             </Link>
-            <Link href="">
+            <Link href="#work">
               <a href="">Work</a>
             </Link>
-            <Link href="/components/Contact/Contact">
+            <Link href="#contact">
               <a href="">Contact</a>
             </Link>
           </div>

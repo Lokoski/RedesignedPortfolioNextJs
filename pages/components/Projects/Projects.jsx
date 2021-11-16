@@ -13,7 +13,10 @@ const Projects = () => {
   const [projectId, setProjectId] = useState();
   return (
     <>
-      <div className={styles.container}>
+      <div
+        className={styles.container}
+        id="work"
+      >
         <h1>
           Work<span>.</span>
         </h1>
