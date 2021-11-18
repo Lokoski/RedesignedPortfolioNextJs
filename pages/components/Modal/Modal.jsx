@@ -12,15 +12,13 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 library.add(fas, fab);
 
 const Modal = ({ data, projectId, setOpenModal }) => {
-  const filteredData = data && data.filter((data) => data.id === projectId)[0];
-
-  console.log(filteredData.image.map((image) => image));
+  const filteredData = data?.filter((data) => data.id === projectId)[0];
 
   const ref = useOnclickOutside(() => {
     setOpenModal(false);
   });
 
-  const images = filteredData.image.map((data, i) => data);
+  const images = filteredData?.image.map((data, i) => data);
 
   const [index, setIndex] = useState(0);
 
@@ -44,7 +42,7 @@ const Modal = ({ data, projectId, setOpenModal }) => {
               </button>
             </div>
             <div className={styles.imageContainer}>
-              <Image src={images[index]} alt="image" />
+              <Image src={images && images[index]} alt="image" />
             </div>
 
             <div className={styles.buttonContainer}>
