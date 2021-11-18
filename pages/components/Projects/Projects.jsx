@@ -3,12 +3,9 @@ import { useState } from "react";
 import styles from "./Projects.module.scss";
 import Modal from "../Modal/Modal";
 import { PROJECTS } from "../../../data/projects";
-import onClickOutside from "react-onclickoutside";
 
 const Projects = () => {
   const [openModal, setOpenModal] = useState(false);
-
-  // Projects.handleClickOutside = () => setOpenModal(false);
 
   const [projectId, setProjectId] = useState();
   return (

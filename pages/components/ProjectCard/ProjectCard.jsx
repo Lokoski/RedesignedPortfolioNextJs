@@ -2,6 +2,9 @@ import styles from "./ProjectCard.module.scss";
 import Image from "next/image";
 
 const ProjectCard = ({ projects, setOpenModal, openModal, setProjectId }) => {
+
+  console.log(projects)
+
   return (
     <div className={styles.container}>
       {projects &&
@@ -10,7 +13,7 @@ const ProjectCard = ({ projects, setOpenModal, openModal, setProjectId }) => {
             <div className={styles.cardWrapper}>
               <div className={styles.cardContainer}>
                 <Image
-                  src={project.image}
+                  src={project.image[0]}
                   alt=""
                   layout="fill"
                   className={styles.cardImage}
