@@ -77,4 +77,88 @@ export const PROJECTS = [
     github: "https://github.com/Lokoski/WeatherApp",
     liveDemo: "https://weather22.netlify.app/",
   },
+  {
+    id: 7,
+    image: [
+      require("/public/images/Project-Imgs/WeatherApp/WeatherFront.png"),
+      require("/public/images/Project-Imgs/PersonalSite/PersonalSiteFront.png"),
+      require("/public/images/Project-Imgs/ToDoApp/Todo.png"),
+      require("/public/images/Project-Imgs/Nucamp/NuCampFront.png"),
+    ],
+    title: "Weather App",
+    description:
+      "This is a simple weather app I created to practice working with APIs. It is fully responsive on all mobile devices.Developed with ReactJs, CSS3, Axios and the OpenWeatherMap API. ",
+    github: "https://github.com/Lokoski/WeatherApp",
+    liveDemo: "https://weather22.netlify.app/",
+  },
+  {
+    id: 8,
+    image: [
+      require("/public/images/Project-Imgs/WeatherApp/WeatherFront.png"),
+      require("/public/images/Project-Imgs/PersonalSite/PersonalSiteFront.png"),
+      require("/public/images/Project-Imgs/ToDoApp/Todo.png"),
+      require("/public/images/Project-Imgs/Nucamp/NuCampFront.png"),
+    ],
+    title: "Weather App",
+    description:
+      "This is a simple weather app I created to practice working with APIs. It is fully responsive on all mobile devices.Developed with ReactJs, CSS3, Axios and the OpenWeatherMap API. ",
+    github: "https://github.com/Lokoski/WeatherApp",
+    liveDemo: "https://weather22.netlify.app/",
+  },
+  {
+    id: 9,
+    image: [
+      require("/public/images/Project-Imgs/WeatherApp/WeatherFront.png"),
+      require("/public/images/Project-Imgs/PersonalSite/PersonalSiteFront.png"),
+      require("/public/images/Project-Imgs/ToDoApp/Todo.png"),
+      require("/public/images/Project-Imgs/Nucamp/NuCampFront.png"),
+    ],
+    title: "Weather App",
+    description:
+      "This is a simple weather app I created to practice working with APIs. It is fully responsive on all mobile devices.Developed with ReactJs, CSS3, Axios and the OpenWeatherMap API. ",
+    github: "https://github.com/Lokoski/WeatherApp",
+    liveDemo: "https://weather22.netlify.app/",
+  },
+  {
+    id: 10,
+    image: [
+      require("/public/images/Project-Imgs/WeatherApp/WeatherFront.png"),
+      require("/public/images/Project-Imgs/PersonalSite/PersonalSiteFront.png"),
+      require("/public/images/Project-Imgs/ToDoApp/Todo.png"),
+      require("/public/images/Project-Imgs/Nucamp/NuCampFront.png"),
+    ],
+    title: "Weather App",
+    description:
+      "This is a simple weather app I created to practice working with APIs. It is fully responsive on all mobile devices.Developed with ReactJs, CSS3, Axios and the OpenWeatherMap API. ",
+    github: "https://github.com/Lokoski/WeatherApp",
+    liveDemo: "https://weather22.netlify.app/",
+  },
+  {
+    id: 11,
+    image: [
+      require("/public/images/Project-Imgs/WeatherApp/WeatherFront.png"),
+      require("/public/images/Project-Imgs/PersonalSite/PersonalSiteFront.png"),
+      require("/public/images/Project-Imgs/ToDoApp/Todo.png"),
+      require("/public/images/Project-Imgs/Nucamp/NuCampFront.png"),
+    ],
+    title: "Weather App",
+    description:
+      "This is a simple weather app I created to practice working with APIs. It is fully responsive on all mobile devices.Developed with ReactJs, CSS3, Axios and the OpenWeatherMap API. ",
+    github: "https://github.com/Lokoski/WeatherApp",
+    liveDemo: "https://weather22.netlify.app/",
+  },
+  {
+    id: 12,
+    image: [
+      require("/public/images/Project-Imgs/WeatherApp/WeatherFront.png"),
+      require("/public/images/Project-Imgs/PersonalSite/PersonalSiteFront.png"),
+      require("/public/images/Project-Imgs/ToDoApp/Todo.png"),
+      require("/public/images/Project-Imgs/Nucamp/NuCampFront.png"),
+    ],
+    title: "Weather App",
+    description:
+      "This is a simple weather app I created to practice working with APIs. It is fully responsive on all mobile devices.Developed with ReactJs, CSS3, Axios and the OpenWeatherMap API. ",
+    github: "https://github.com/Lokoski/WeatherApp",
+    liveDemo: "https://weather22.netlify.app/",
+  },
 ];

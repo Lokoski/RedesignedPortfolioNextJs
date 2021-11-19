@@ -33,7 +33,11 @@ const Modal = ({ data, projectId, setOpenModal }) => {
             <div className={styles.buttonContainer}>
               <button
                 onClick={() => setIndex(index === 0 ? 0 : index - 1)}
-                className={styles.carouselButton}
+                className={
+                  index === 0
+                    ? `${styles.carouselButton} ${styles.disabled}`
+                    : `${styles.carouselButton}`
+                }
               >
                 <FontAwesomeIcon
                   className={styles.arrow}
@@ -52,7 +56,11 @@ const Modal = ({ data, projectId, setOpenModal }) => {
                     index === images.length - 1 ? images.length - 1 : index + 1
                   )
                 }
-                className={styles.carouselButton}
+                className={
+                  index === images.length - 1
+                    ? `${styles.carouselButton} ${styles.disabled}`
+                    : `${styles.carouselButton}`
+                }
               >
                 <FontAwesomeIcon
                   className={styles.arrow}

@@ -1,5 +1,5 @@
 import ProjectCard from "../ProjectCard/ProjectCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Projects.module.scss";
 import Modal from "../Modal/Modal";
 import { PROJECTS } from "../../../data/projects";
@@ -8,12 +8,10 @@ const Projects = () => {
   const [openModal, setOpenModal] = useState(false);
 
   const [projectId, setProjectId] = useState();
+
   return (
     <>
-      <div
-        className={styles.container}
-        id="work"
-      >
+      <div className={styles.container} id="work">
         <h1>
           Work<span>.</span>
         </h1>

@@ -237,6 +237,10 @@
     .imageContainer {
       width: 840px;
     }
+    .disabled {
+      color: rgb(121, 120, 120);
+      cursor: not-allowed!important;
+    }
 
     .carouselButton {
       margin: auto 30px;
