@@ -18,11 +18,11 @@ const ProjectCard = ({ projects, setOpenModal, openModal, setProjectId }) => {
 
   const handleLoadMore = () => {
     setLoadProjects(projects.slice(0, index + 4));
-    setIndex(loadProjects.length + 4);
+    setIndex(loadProjects?.length + 4);
   };
 
   const handleLoadLess = () => {
-    setIndex(loadProjects.length - 4);
+    setIndex(loadProjects?.length - 4);
     setLoadProjects(projects.slice(0, 4));
   };
 
@@ -61,12 +61,12 @@ const ProjectCard = ({ projects, setOpenModal, openModal, setProjectId }) => {
         <div
           className={styles.arrowsContainer}
           onClick={() => {
-            loadProjects?.length === projects.length
+            loadProjects?.length === projects?.length
               ? handleLoadLess()
               : handleLoadMore();
           }}
         >
-          {loadProjects?.length === projects.length ? (
+          {loadProjects?.length === projects?.length ? (
             <div
               className={styles.arrows}
               style={{ transform: "rotate(225deg)" }}
