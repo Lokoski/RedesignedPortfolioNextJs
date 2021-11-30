@@ -2,8 +2,13 @@ export const PROJECTS = [
   {
     id: 1,
     image: [
-      require("/public/images/Project-Imgs/Avocademy/HomePage.png"),
-      require("/public/images/Project-Imgs/Avocademy/Filters.png"),
+      require("/public/images/Project-Imgs/Avocademy/HomePage1.png"),
+      require("/public/images/Project-Imgs/Avocademy/AvoFP.png"),
+      require("/public/images/Project-Imgs/Avocademy/ModuleDD.png"),
+      require("/public/images/Project-Imgs/Avocademy/ModuleDropdown.png"),
+      require("/public/images/Project-Imgs/Avocademy/StudentGraduated.png"),
+      require("/public/images/Project-Imgs/Avocademy/StudentPageNotes.png"),
+      require("/public/images/Project-Imgs/Avocademy/EditNote.png"),
     ],
     title: "Avocademy Dashboard",
     description:

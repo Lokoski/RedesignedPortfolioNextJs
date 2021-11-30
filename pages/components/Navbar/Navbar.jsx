@@ -45,18 +45,22 @@ const Navbar = () => {
               className={styles.logo}
             />
           </div>
-          <div className={styles.links} ref={ref}>
-            <Link href="#home">
-              <a href="">Home</a>
+          <div
+            className={styles.links}
+            ref={ref}
+            onClick={() => setOpenNavBar(false)}
+          >
+            <Link href="/">
+              <a>Home</a>
             </Link>
             <Link href="#about">
-              <a href="">About</a>
+              <a>About</a>
             </Link>
             <Link href="#work">
-              <a href="">Work</a>
+              <a>Work</a>
             </Link>
             <Link href="#contact">
-              <a href="">Contact</a>
+              <a>Contact</a>
             </Link>
           </div>
           <div className={styles.socialIconsContainer}>

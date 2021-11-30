@@ -6,7 +6,6 @@ import Contact from "./components/Contact/Contact";
 import About from "./components/About/AboutMe";
 import Toolkit from "./components/Toolkit/Toolkit";
 
-
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -15,6 +14,10 @@ export default function Home() {
         <meta
           name="description"
           content="Aleksandar Lokoski's personal website "
+        />
+        <link
+          rel="icon"
+          href="/favicon.ico"
         />
       </Head>
       <HomePage />
