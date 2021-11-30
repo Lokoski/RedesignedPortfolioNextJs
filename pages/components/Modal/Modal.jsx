@@ -70,12 +70,30 @@ const Modal = ({ data, projectId, setOpenModal }) => {
             </div>
           </div>
 
-          <div className={styles.contentContainer}>
+          <div
+            className={styles.contentContainer}
+            style={
+              filteredData.title == "Avocademy Dashboard"
+                ? { overflow: "hidden", marginTop: "0" }
+                : null
+            }
+          >
             <div className={styles.title}>
               <h1>{filteredData.title}</h1>
             </div>
-            <div className={styles.description}>
-              <p>{filteredData.description}</p>
+            <div
+              className={styles.description}
+              style={
+                filteredData.title == "Avocademy Dashboard"
+                  ? { height: "55%", overflowY: "scroll" }
+                  : null
+              }
+            >
+              <div>
+                {filteredData.description?.split("<br>").map((desc, i) => (
+                  <p key={i}>- {desc}</p>
+                ))}
+              </div>
             </div>
             <div className={styles.buttons}>
               <Link href={filteredData.github} passHref>

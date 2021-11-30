@@ -38,7 +38,7 @@
 
     @include xs {
       flex-direction: row;
-      width: 355px;
+      width: 100% !important;
       border-bottom: 1px solid $primary-offWhite;
       color: $primary-offWhite;
       margin-bottom: 16px;

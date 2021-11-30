@@ -1,5 +1,5 @@
 import ProjectCard from "../ProjectCard/ProjectCard";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./Projects.module.scss";
 import Modal from "../Modal/Modal";
 import { PROJECTS } from "../../../data/projects";

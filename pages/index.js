@@ -16,7 +16,6 @@ export default function Home() {
           name="description"
           content="Aleksandar Lokoski's personal website "
         />
-        <link rel="icon" href="" />
       </Head>
       <HomePage />
       <Projects />
