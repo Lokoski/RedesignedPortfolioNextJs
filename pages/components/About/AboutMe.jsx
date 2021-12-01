@@ -10,13 +10,18 @@ const AboutMe = () => {
       </h1>
       <div className={styles.contentContainer}>
         <div className={styles.imageContainer}>
-          <Img src={profileImage} layout="fill" className={styles.image} />
+          <Img
+            src={profileImage}
+            layout="fill"
+            alt="Profile Image"
+            className={styles.image}
+          />
         </div>
         <div className={styles.paragraph}>
           <p>
-            Hi, my name is Alex Lokoski and I’m a full stack developer! I
-            was first introduced to coding while trying to create a website for
-            my fitness business and I haven&apos;t looked back since. I&apos;m a
+            Hi, my name is Alex Lokoski and I’m a full stack developer! I was
+            first introduced to coding while trying to create a website for my
+            fitness business and I haven&apos;t looked back since. I&apos;m a
             curious, driven team player, who is always looking to improve. As a
             web developer, I have experience working with JavaScript, ReactJS,
             Redux, HTML, CSS, Sass and Bootstrap for the front end, and React

@@ -36,7 +36,7 @@ const ProjectCard = ({ projects, setOpenModal, openModal, setProjectId }) => {
                 <div className={styles.cardContainer}>
                   <Image
                     src={project.image[0]}
-                    alt=""
+                    alt="Project Image"
                     layout="fill"
                     className={styles.cardImage}
                   />

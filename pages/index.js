@@ -13,12 +13,10 @@ export default function Home() {
         <title>Alex Lokoski</title>
         <meta
           name="description"
-          content="Aleksandar Lokoski's personal website "
+          content="Aleksandar Lokoski's personal website"
         />
-        <link
-          rel="icon"
-          href="/favicon.ico"
-        />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomePage />
       <Projects />
