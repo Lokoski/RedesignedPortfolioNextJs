@@ -28,6 +28,7 @@ export const PROJECTS = [
     description:
       "This is the first iteration of my personal website. It is fully responsive on all mobile devices. <br> Developed with ReactJs, CSS3 and Bootstrap 4",
     github: "https://github.com/Lokoski/PersonalSite-React",
+    liveDemo: "musing-volhard-c524dd.netlify.app",
   },
   {
     id: 3,
