@@ -14,7 +14,7 @@ const AboutMe = () => {
         </div>
         <div className={styles.paragraph}>
           <p>
-            Hi, my name is Aleksandar Lokoski and I’m a full stack developer! I
+            Hi, my name is Alex Lokoski and I’m a full stack developer! I
             was first introduced to coding while trying to create a website for
             my fitness business and I haven&apos;t looked back since. I&apos;m a
             curious, driven team player, who is always looking to improve. As a
