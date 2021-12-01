@@ -46,7 +46,7 @@ const Modal = ({ data, projectId, setOpenModal }) => {
               </button>
             </div>
             <div className={styles.imageContainer}>
-              <Image src={images && images[index]} alt="image" className={styles.modalImage} />
+              <Image src={images && images[index]} alt="image" objectFit="scale-down" loading="eager"/>
             </div>
 
             <div className={styles.buttonContainer}>
